@@ -1,12 +1,12 @@
 {
-    "name": "app-template-drawer-ui-angular2",
+    "name": "carrusel-infantil",
     "main": "main.js",
     "version": "1.0.0",
     "author": {
         "name": "Telerik",
-        "email": "support@telerik.com"
+        "email": "studiosthinkup@gmail.com"
     },
-    "description": "Proyecto que sirve como template para crear aplicaciones con drawer.",
+    "description": "Proyecto para estimulación infantil.",
     "license": "Apache-2.0",
     "keywords": [
         "telerik",
@@ -20,12 +20,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git@github.com/telerik/nativescript-ui-samples-angular.git"
+        "url": "https://github.com/ThinkUpStudios/carrusel-infantil.git"
     },
     "bugs": {
-        "url": "https://github.com/ThinkUpStudios/app-template-drawer-native/issues"
+        "url": "https://github.com/ThinkUpStudios/carrusel-infantil/issues"
     },
-    "homepage": "https://github.com/ThinkUpStudios/app-template-drawer-native",
+    "homepage": "https://github.com/ThinkUpStudios/carrusel-infantil",
     "android": {
         "v8Flags": "--expose_gc"
     },

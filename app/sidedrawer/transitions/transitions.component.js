@@ -59,24 +59,21 @@ var AppComponent = (function () {
     AppComponent.prototype.setDrawerTransition = function (transition) {
         this.sideDrawerTransition = transition;
     };
-    AppComponent.prototype.clickSocial = function () {
+    AppComponent.prototype.misCarruseles = function () {
         console.log('estoy en social');
-        this._router.navigate(["SideDrawerEvents"]);
+        this._router.navigate(["SideDrawerMisCarruseles"]);
     };
-    AppComponent.prototype.clickPromotions = function () {
+    AppComponent.prototype.administrar = function () {
         console.log('estoy en promociones');
     };
-    AppComponent.prototype.clickImportant = function () {
+    AppComponent.prototype.configurar = function () {
         console.log('estoy en importantes');
     };
-    AppComponent.prototype.clickStarred = function () {
+    AppComponent.prototype.ayuda = function () {
         console.log('estoy en la starred');
     };
-    AppComponent.prototype.clickMail = function () {
+    AppComponent.prototype.opinion = function () {
         console.log('estoy en la mail');
-    };
-    AppComponent.prototype.clickDrafts = function () {
-        console.log('estoy en la drafts');
     };
     __decorate([
         core_1.ViewChild(side_drawer_directives_1.RadSideDrawerComponent), 

@@ -42,24 +42,21 @@ var AppComponent = (function () {
     /**
      * name
      */
-    AppComponent.prototype.clickSocial = function () {
+    AppComponent.prototype.misCarruseles = function () {
         console.log('estoy en social');
         this._router.navigate(["SideDrawerTransitions"]);
     };
-    AppComponent.prototype.clickPromotions = function () {
+    AppComponent.prototype.administrar = function () {
         console.log('estoy en promociones');
     };
-    AppComponent.prototype.clickImportant = function () {
+    AppComponent.prototype.configurar = function () {
         console.log('estoy en importantes');
     };
-    AppComponent.prototype.clickStarred = function () {
+    AppComponent.prototype.ayuda = function () {
         console.log('estoy en la starred');
     };
-    AppComponent.prototype.clickMail = function () {
+    AppComponent.prototype.opinion = function () {
         console.log('estoy en la mail');
-    };
-    AppComponent.prototype.clickDrafts = function () {
-        console.log('estoy en la drafts');
     };
     __decorate([
         core_1.ViewChild(side_drawer_directives_1.RadSideDrawerComponent), 
@@ -69,7 +66,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: "my-app",
             directives: [side_drawer_directives_1.RadSideDrawerComponent, side_drawer_directives_1.MainTemplateDirective, side_drawer_directives_1.DrawerTemplateDirective],
-            templateUrl: 'sidedrawer/events/events.component.html'
+            templateUrl: 'sidedrawer/miscarruseles/miscarruseles.component.html'
         }),
         __param(0, core_1.Inject(page_1.Page)), 
         __metadata('design:paramtypes', [page_1.Page, router_1.Router, router_1.RouteParams])
@@ -78,5 +75,4 @@ var AppComponent = (function () {
     var _a;
 }());
 exports.AppComponent = AppComponent;
-// << sidedrawer-angular-callbacks-definition
-//# sourceMappingURL=events.component.js.map
+//# sourceMappingURL=miscarruseles.component.js.map

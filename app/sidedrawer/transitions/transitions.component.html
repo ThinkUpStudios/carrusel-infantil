@@ -4,17 +4,14 @@
     <template drawerSide>
         <StackLayout style="background-color: gray;">
             <StackLayout style=" padding:10;text-align: center;">
-                <Label text="Navigation Menu"></Label>
+                <Label text="Carrusel Infantil"></Label>
             </StackLayout>
-            <StackLayout style="background-color: gray;">
-                <Label text="Primary" style="padding: 10px;background-color:lightgray;"></Label>
-                <Label text="Social" style="padding: 10px;" (tap)=clickSocial()></Label>
-                <Label text="Promotions" style="padding: 10px;" (tap)=clickPromotions()></Label>
-                <Label text="Labels" style="padding:10px;background-color: lightgray;"></Label>
-                <Label text="Important" style="padding: 10px;" (tap)=clickImportant()></Label>
-                <Label text="Starred" style="padding: 10px;" (tap)=clickStarred()></Label>
-                <Label text="Sent Mail" style="padding: 10px;" (tap)=clickMail()></Label>
-                <Label text="Drafts" style="padding: 10px;" (tap)=clickDrafts()></Label>
+            <StackLayout style="background-color: gray;">                
+                <Label text="Mis carruseles" style="padding: 10px;" (tap)=misCarruseles()></Label>
+                <Label text="Administrar Carruseles" style="padding: 10px;" (tap)=administrar()></Label>                
+                <Label text="Configurar aplicación" style="padding: 10px;" (tap)=configurar()></Label>
+                <Label text="Ayuda" style="padding: 10px;" (tap)=ayuda()></Label>
+                <Label text="Danos tu opinión" style="padding: 10px;" (tap)=opinion()></Label>                                   
             </StackLayout>
        </StackLayout>
     </template>

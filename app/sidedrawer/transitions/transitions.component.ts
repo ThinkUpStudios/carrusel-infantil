@@ -69,24 +69,22 @@ export class AppComponent {
        this.sideDrawerTransition = transition;
     }
     
-    public clickSocial() {
+    public misCarruseles() {
         console.log('estoy en social');
-        this._router.navigate(["SideDrawerEvents"]);        
+        this._router.navigate(["SideDrawerMisCarruseles"]);
+        
     }
-    public clickPromotions() {
+    public administrar() {
         console.log('estoy en promociones')        
     }
-    public clickImportant() {
+    public configurar() {
         console.log('estoy en importantes')
     }
-    public clickStarred() {
+    public ayuda() {
         console.log('estoy en la starred')
     }
-    public clickMail() {
+    public opinion() {
         console.log('estoy en la mail')
-    }
-    public clickDrafts() {
-        console.log('estoy en la drafts')
-    }
+    }   
     
 }

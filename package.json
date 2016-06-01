@@ -1,15 +1,15 @@
 {
-	"name": "app-template-drawer-ui-angular2",
+	"name": "carrusel-infantil",
 	"version": "1.0.0",
-	"description": "Proyecto que sirve como template para crear aplicaciones con drawer.",
+	"description": "Proyecto para estimulación infantil.",
 	"license": "SEE LICENSE IN <your-license-filename>",
-	"readme": "NativeScript Application",
+	"readme": "Carrusel Infantil",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ThinkUpStudios/app-template-drawer-native.git"
+		"url": "https://github.com/ThinkUpStudios/carrusel-infantil.git"
 	},
 	"nativescript": {
-		"id": "org.nativescript.apptemplatedrawer",
+		"id": "org.studiosthinkup.carrusel",
 		"tns-ios": {
 			"version": "2.0.0"
 		},

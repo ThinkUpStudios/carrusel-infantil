@@ -12,7 +12,8 @@ import { Router, RouteParams } from "angular2/router";
 @Component({
     selector: "my-app",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/events/events.component.html'
+    templateUrl: 'sidedrawer/miscarruseles/miscarruseles.component.html'
+    
 })
 export class AppComponent {
     constructor(@Inject(Page) private page: Page, private _router: Router, private _routeParams: RouteParams) {
@@ -48,26 +49,20 @@ export class AppComponent {
     /**
      * name
      */
-    public clickSocial() {
+    public misCarruseles() {
+        console.log('Click en mis carruseles')
+    }
+    public administrar() {
         console.log('estoy en social');
-        this._router.navigate(["SideDrawerTransitions"]);
-        
+        this._router.navigate(["SideDrawerTransitions"]);                
     }
-    public clickPromotions() {
-        console.log('estoy en promociones')        
-    }
-    public clickImportant() {
+    public configurar() {
         console.log('estoy en importantes')
     }
-    public clickStarred() {
+    public ayuda() {
         console.log('estoy en la starred')
     }
-    public clickMail() {
+    public opinion() {
         console.log('estoy en la mail')
-    }
-    public clickDrafts() {
-        console.log('estoy en la drafts')
-    }
-    
+    }   
 }
-// << sidedrawer-angular-callbacks-definition

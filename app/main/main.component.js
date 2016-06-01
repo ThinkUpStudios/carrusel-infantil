@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("angular2/core");
 var router_1 = require("angular2/router");
 var router_2 = require("nativescript-angular/router");
-var SideDrawerEvents = require("../sidedrawer/events/events.component");
+var SideDrawerMisCarruseles = require("../sidedrawer/miscarruseles/miscarruseles.component");
 var SideDrawerTransitions = require("../sidedrawer/transitions/transitions.component");
 var MainComponent = (function () {
     function MainComponent() {
@@ -18,12 +18,21 @@ var MainComponent = (function () {
     MainComponent = __decorate([
         core_1.Component({
             selector: "main",
-            directives: [router_2.NS_ROUTER_DIRECTIVES],
+            directives: [router_1.ROUTER_DIRECTIVES, router_2.NS_ROUTER_DIRECTIVES],
             providers: [router_2.NS_ROUTER_PROVIDERS],
+            /**
+             * Para que funcione <page-router-outlet></page-router-outlet> no es necesario agregar la directiva  ROUTER_DIRECTIVES
+            */
+            //template: "<page-router-outlet></page-router-outlet>"
+            /**
+             * Para que funcione <router-outlet></router-outlet> se debe agregar la directiva  ROUTER_DIRECTIVES
+             * En este caso no funciona el boton atras. Pero en algunos casos puede servir.
+             * template: "<router-outlet></router-outlet>"
+            */
             template: "<page-router-outlet></page-router-outlet>"
         }),
         router_1.RouteConfig([
-            { path: "/sidedrawer-events", component: SideDrawerEvents.AppComponent, name: "SideDrawerEvents", useAsDefault: true },
+            { path: "/sidedrawer-miscarruseles", component: SideDrawerMisCarruseles.AppComponent, name: "SideDrawerMisCarruseles", useAsDefault: true },
             { path: "/sidedrawer-transitions", component: SideDrawerTransitions.AppComponent, name: "SideDrawerTransitions" },
         ]), 
         __metadata('design:paramtypes', [])
