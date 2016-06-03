@@ -61,7 +61,7 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.misCarruseles = function () {
         console.log('estoy en social');
-        this._router.navigate(["SideDrawerMisCarruseles"]);
+        this._router.navigate(["MisCarruseles"]);
     };
     AppComponent.prototype.administrar = function () {
         console.log('estoy en promociones');
@@ -83,7 +83,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: "sidedrawer-transitions",
             directives: [side_drawer_directives_1.RadSideDrawerComponent, side_drawer_directives_1.MainTemplateDirective, side_drawer_directives_1.DrawerTemplateDirective],
-            templateUrl: 'sidedrawer/transitions/transitions.component.html'
+            templateUrl: 'sidedrawer/administrar/administrar.component.html'
         }),
         __param(0, core_1.Inject(page_1.Page)), 
         __metadata('design:paramtypes', [page_1.Page, router_1.Router, router_1.RouteParams])
@@ -92,4 +92,4 @@ var AppComponent = (function () {
     var _a;
 }());
 exports.AppComponent = AppComponent;
-//# sourceMappingURL=transitions.component.js.map
+//# sourceMappingURL=administrar.component.js.map

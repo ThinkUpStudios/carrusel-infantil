@@ -6,6 +6,7 @@ import {ActionItem} from "ui/action-bar";
 import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
 import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
 import { Router, RouteParams } from "angular2/router";
+import {RoutesManager} from "../routesManager"
 
 
 // >> sidedrawer-angular-callbacks-definition
@@ -15,8 +16,9 @@ import { Router, RouteParams } from "angular2/router";
     templateUrl: 'sidedrawer/miscarruseles/miscarruseles.component.html'
     
 })
-export class AppComponent {
-    constructor(@Inject(Page) private page: Page, private _router: Router, private _routeParams: RouteParams) {
+export class AppComponent extends RoutesManager {
+    constructor(@Inject(Page) private page: Page, _router: Router, _routeParams: RouteParams) {
+        super(_router, _routeParams);
     }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
@@ -46,15 +48,23 @@ export class AppComponent {
     public onDrawerClosed() {
          console.log("Drawer closed");
     }
+    
+    getDrawer(){
+        return this.drawer;
+    }
+    
+    getActualPage(){
+        return "MisCarruseles";
+    }
     /**
      * name
-     */
-    public misCarruseles() {
-        console.log('Click en mis carruseles')
+     
+    public misCarruseles() {        
+        this.drawer.closeDrawer();
     }
     public administrar() {
         console.log('estoy en social');
-        this._router.navigate(["SideDrawerTransitions"]);                
+        this._router.navigate(["Administrar"]);                
     }
     public configurar() {
         console.log('estoy en importantes')
@@ -65,4 +75,6 @@ export class AppComponent {
     public opinion() {
         console.log('estoy en la mail')
     }   
+    */
+    
 }

@@ -10,7 +10,7 @@ import { Router, RouteParams } from "angular2/router";
 @Component({
     selector: "sidedrawer-transitions",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/transitions/transitions.component.html'
+    templateUrl: 'sidedrawer/administrar/administrar.component.html'
 })
 // >> sidedrawer-angular-transition-definition
 export class AppComponent {
@@ -71,7 +71,7 @@ export class AppComponent {
     
     public misCarruseles() {
         console.log('estoy en social');
-        this._router.navigate(["SideDrawerMisCarruseles"]);
+        this._router.navigate(["MisCarruseles"]);
         
     }
     public administrar() {

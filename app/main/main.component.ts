@@ -2,8 +2,8 @@ import { Component } from "angular2/core";
 import { ObservableArray } from "data/observable-array";
 import { RouteConfig, ROUTER_DIRECTIVES } from "angular2/router";
 import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
-import * as SideDrawerMisCarruseles from "../sidedrawer/miscarruseles/miscarruseles.component";
-import * as SideDrawerTransitions from "../sidedrawer/transitions/transitions.component";
+import * as MisCarruseles from "../sidedrawer/miscarruseles/miscarruseles.component";
+import * as Administrar from "../sidedrawer/administrar/administrar.component";
 
 @Component({
   selector: "main",
@@ -23,8 +23,8 @@ import * as SideDrawerTransitions from "../sidedrawer/transitions/transitions.co
 })
 @RouteConfig([
 
-  { path: "/sidedrawer-miscarruseles", component: SideDrawerMisCarruseles.AppComponent, name: "SideDrawerMisCarruseles", useAsDefault: true  },
-  { path: "/sidedrawer-transitions", component: SideDrawerTransitions.AppComponent, name: "SideDrawerTransitions" },
+  { path: "/sidedrawer-miscarruseles", component: MisCarruseles.AppComponent, name: "MisCarruseles", useAsDefault: true  },
+  { path: "/sidedrawer-transitions", component: Administrar.AppComponent, name: "Administrar" },
 ])
 export class MainComponent {
 

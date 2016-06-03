@@ -1,3 +1,8 @@
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -14,12 +19,13 @@ var core_1 = require("angular2/core");
 var page_1 = require("ui/page");
 var side_drawer_directives_1 = require("nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives");
 var router_1 = require("angular2/router");
+var routesManager_1 = require("../routesManager");
 // >> sidedrawer-angular-callbacks-definition
-var AppComponent = (function () {
+var AppComponent = (function (_super) {
+    __extends(AppComponent, _super);
     function AppComponent(page, _router, _routeParams) {
+        _super.call(this, _router, _routeParams);
         this.page = page;
-        this._router = _router;
-        this._routeParams = _routeParams;
     }
     AppComponent.prototype.ngAfterViewInit = function () {
         this.drawer = this.drawerComponent.sideDrawer;
@@ -39,24 +45,11 @@ var AppComponent = (function () {
     AppComponent.prototype.onDrawerClosed = function () {
         console.log("Drawer closed");
     };
-    /**
-     * name
-     */
-    AppComponent.prototype.misCarruseles = function () {
-        console.log('estoy en social');
-        this._router.navigate(["SideDrawerTransitions"]);
+    AppComponent.prototype.getDrawer = function () {
+        return this.drawer;
     };
-    AppComponent.prototype.administrar = function () {
-        console.log('estoy en promociones');
-    };
-    AppComponent.prototype.configurar = function () {
-        console.log('estoy en importantes');
-    };
-    AppComponent.prototype.ayuda = function () {
-        console.log('estoy en la starred');
-    };
-    AppComponent.prototype.opinion = function () {
-        console.log('estoy en la mail');
+    AppComponent.prototype.getActualPage = function () {
+        return "MisCarruseles";
     };
     __decorate([
         core_1.ViewChild(side_drawer_directives_1.RadSideDrawerComponent), 
@@ -73,6 +66,6 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
     var _a;
-}());
+}(routesManager_1.RoutesManager));
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=miscarruseles.component.js.map

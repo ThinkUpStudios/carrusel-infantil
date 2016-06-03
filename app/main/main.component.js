@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("angular2/core");
 var router_1 = require("angular2/router");
 var router_2 = require("nativescript-angular/router");
-var SideDrawerMisCarruseles = require("../sidedrawer/miscarruseles/miscarruseles.component");
-var SideDrawerTransitions = require("../sidedrawer/transitions/transitions.component");
+var MisCarruseles = require("../sidedrawer/miscarruseles/miscarruseles.component");
+var Administrar = require("../sidedrawer/administrar/administrar.component");
 var MainComponent = (function () {
     function MainComponent() {
     }
@@ -32,8 +32,8 @@ var MainComponent = (function () {
             template: "<page-router-outlet></page-router-outlet>"
         }),
         router_1.RouteConfig([
-            { path: "/sidedrawer-miscarruseles", component: SideDrawerMisCarruseles.AppComponent, name: "SideDrawerMisCarruseles", useAsDefault: true },
-            { path: "/sidedrawer-transitions", component: SideDrawerTransitions.AppComponent, name: "SideDrawerTransitions" },
+            { path: "/sidedrawer-miscarruseles", component: MisCarruseles.AppComponent, name: "MisCarruseles", useAsDefault: true },
+            { path: "/sidedrawer-transitions", component: Administrar.AppComponent, name: "Administrar" },
         ]), 
         __metadata('design:paramtypes', [])
     ], MainComponent);
