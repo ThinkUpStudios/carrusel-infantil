@@ -9,12 +9,12 @@
 		"url": "https://github.com/ThinkUpStudios/carrusel-infantil.git"
 	},
 	"nativescript": {
-		"id": "carruselInfantil",
+		"id": "com.thinkup.carruselInfantil",
 		"tns-ios": {
 			"version": "2.0.1"
 		},
 		"tns-android": {
-			"version": "2.1.0-2016-05-20-601"
+			"version": "2.0.0"
 		}
 	},
 	"dependencies": {
