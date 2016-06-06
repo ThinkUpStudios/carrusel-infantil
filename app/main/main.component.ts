@@ -28,11 +28,11 @@ import {RoutesManager} from "../sidedrawer/routesManager"
 })
 @RouteConfig([
 
-  { path: "/sidedrawer-miscarruseles", component: MisCarruseles.AppComponent, name: "MisCarruseles", useAsDefault: true  },
-  { path: "/sidedrawer-transitions", component: Administrar.AppComponent, name: "Administrar" },
-  { path: "/sidedrawer/nuevo", component: NuevoCarrusel.AppComponent, name: "NuevoCarrusel" },
-  { path: "/sidedrawer-configuracion", component: Configuracion.ConfiguracionComponent, name: RoutesManager.CONFIGURAR_RUTE },
-  { path: "/sidedrawer-ayuda", component: Ayuda.AyudaComponent, name: RoutesManager.AYUDA_RUTE },
+  { path: "/sidedrawer-miscarruseles", component: MisCarruseles.AppComponent, name: RoutesManager.MIS_CARRUSELES_ROUTE, useAsDefault: true  },
+  { path: "/sidedrawer-transitions", component: Administrar.AppComponent, name: RoutesManager.ADMINISTRAR_ROUTE },
+  { path: "/sidedrawer/nuevo", component: NuevoCarrusel.AppComponent, name: RoutesManager.NUEVO_CARRUSEL_ROUTE },
+  { path: "/sidedrawer-configuracion", component: Configuracion.ConfiguracionComponent, name: RoutesManager.CONFIGURAR_ROUTE },
+  { path: "/sidedrawer-ayuda", component: Ayuda.AyudaComponent, name: RoutesManager.AYUDA_ROUTE },
 
 ])
 export class MainComponent {

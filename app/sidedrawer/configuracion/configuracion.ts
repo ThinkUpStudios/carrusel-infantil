@@ -76,6 +76,6 @@ export class ConfiguracionComponent extends RoutesManager {
     }
     
     getActualPage(){
-        return RoutesManager.CONFIGURAR_RUTE;
+        return RoutesManager.CONFIGURAR_ROUTE;
     }
 }

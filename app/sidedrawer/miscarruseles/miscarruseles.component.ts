@@ -35,7 +35,7 @@ export class MisCarruselesComponent extends RoutesManager {
     }
     
     getActualPage(){
-        return RoutesManager.MIS_CARRUSELES_RUTE;
+        return RoutesManager.MIS_CARRUSELES_ROUTE;
     }
     
     

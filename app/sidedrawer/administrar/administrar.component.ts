@@ -76,7 +76,7 @@ export class AdministrarComponent extends RoutesManager {
     }
     
     getActualPage(){
-        return RoutesManager.ADMINISTRAR_RUTE;
+        return RoutesManager.ADMINISTRAR_ROUTE;
     }
     
     

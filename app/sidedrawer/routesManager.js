@@ -4,48 +4,48 @@ var RoutesManager = (function () {
         this._routeParams = _routeParams;
     }
     RoutesManager.prototype.misCarruseles = function () {
-        if (this.getActualPage() == RoutesManager.MIS_CARRUSELES_RUTE)
+        if (this.getActualPage() == RoutesManager.MIS_CARRUSELES_ROUTE)
             this.getDrawer().closeDrawer();
         else {
-            this._router.navigate([RoutesManager.MIS_CARRUSELES_RUTE]);
+            this._router.navigate([RoutesManager.MIS_CARRUSELES_ROUTE]);
         }
     };
     RoutesManager.prototype.newCarrusel = function () {
         this._router.navigate(["NuevoCarrusel"]);
     };
     RoutesManager.prototype.administrar = function () {
-        if (this.getActualPage() == RoutesManager.ADMINISTRAR_RUTE)
+        if (this.getActualPage() == RoutesManager.ADMINISTRAR_ROUTE)
             this.getDrawer().closeDrawer();
         else {
-            this._router.navigate([RoutesManager.ADMINISTRAR_RUTE]);
+            this._router.navigate([RoutesManager.ADMINISTRAR_ROUTE]);
         }
     };
     RoutesManager.prototype.configurar = function () {
-        if (this.getActualPage() == RoutesManager.CONFIGURAR_RUTE)
+        if (this.getActualPage() == RoutesManager.CONFIGURAR_ROUTE)
             this.getDrawer().closeDrawer();
         else {
-            this._router.navigate([RoutesManager.CONFIGURAR_RUTE]);
+            this._router.navigate([RoutesManager.CONFIGURAR_ROUTE]);
         }
     };
     RoutesManager.prototype.ayuda = function () {
-        if (this.getActualPage() == RoutesManager.AYUDA_RUTE)
+        if (this.getActualPage() == RoutesManager.AYUDA_ROUTE)
             this.getDrawer().closeDrawer();
         else {
-            this._router.navigate([RoutesManager.AYUDA_RUTE]);
+            this._router.navigate([RoutesManager.AYUDA_ROUTE]);
         }
     };
     RoutesManager.prototype.opinion = function () {
-        if (this.getActualPage() == RoutesManager.OPINION_RUTE)
+        if (this.getActualPage() == RoutesManager.OPINION_ROUTE)
             this.getDrawer().closeDrawer();
         else {
-            this._router.navigate([RoutesManager.OPINION_RUTE]);
+            this._router.navigate([RoutesManager.OPINION_ROUTE]);
         }
     };
-    RoutesManager.MIS_CARRUSELES_RUTE = "MisCarruseles";
-    RoutesManager.ADMINISTRAR_RUTE = "Administrar";
-    RoutesManager.CONFIGURAR_RUTE = "Configurar";
-    RoutesManager.AYUDA_RUTE = "Ayuda";
-    RoutesManager.OPINION_RUTE = "Opinion";
+    RoutesManager.MIS_CARRUSELES_ROUTE = "MisCarruseles";
+    RoutesManager.ADMINISTRAR_ROUTE = "Administrar";
+    RoutesManager.CONFIGURAR_ROUTE = "Configurar";
+    RoutesManager.AYUDA_ROUTE = "Ayuda";
+    RoutesManager.OPINION_ROUTE = "Opinion";
     return RoutesManager;
 }());
 exports.RoutesManager = RoutesManager;

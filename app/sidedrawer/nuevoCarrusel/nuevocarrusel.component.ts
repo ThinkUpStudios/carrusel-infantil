@@ -40,7 +40,7 @@ export class AppComponent extends RoutesManager {
     }
 
     getActualPage(){
-        return "MisCarruseles";
+        return RoutesManager.NUEVO_CARRUSEL_ROUTE;
     }
     /**
      * name

@@ -76,6 +76,6 @@ export class AyudaComponent extends RoutesManager {
     }
     
     getActualPage(){
-        return RoutesManager.AYUDA_RUTE;
+        return RoutesManager.AYUDA_ROUTE;
     }
 }
