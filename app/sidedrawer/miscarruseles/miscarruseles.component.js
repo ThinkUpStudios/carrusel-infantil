@@ -21,41 +21,41 @@ var side_drawer_directives_1 = require("nativescript-telerik-ui-pro/sidedrawer/a
 var router_1 = require("angular2/router");
 var routesManager_1 = require("../routesManager");
 // >> sidedrawer-angular-callbacks-definition
-var AppComponent = (function (_super) {
-    __extends(AppComponent, _super);
-    function AppComponent(page, _router, _routeParams) {
+var MisCarruselesComponent = (function (_super) {
+    __extends(MisCarruselesComponent, _super);
+    function MisCarruselesComponent(page, _router, _routeParams) {
         _super.call(this, _router, _routeParams);
         this.page = page;
     }
-    AppComponent.prototype.ngAfterViewInit = function () {
+    MisCarruselesComponent.prototype.ngAfterViewInit = function () {
         this.drawer = this.drawerComponent.sideDrawer;
     };
-    AppComponent.prototype.openDrawer = function () {
+    MisCarruselesComponent.prototype.openDrawer = function () {
         this.drawer.showDrawer();
     };
-    AppComponent.prototype.onDrawerOpening = function () {
+    MisCarruselesComponent.prototype.onDrawerOpening = function () {
         console.log("Drawer opening");
     };
-    AppComponent.prototype.onDrawerOpened = function () {
+    MisCarruselesComponent.prototype.onDrawerOpened = function () {
         console.log("Drawer opened");
     };
-    AppComponent.prototype.onDrawerClosing = function () {
+    MisCarruselesComponent.prototype.onDrawerClosing = function () {
         console.log("Drawer closing");
     };
-    AppComponent.prototype.onDrawerClosed = function () {
+    MisCarruselesComponent.prototype.onDrawerClosed = function () {
         console.log("Drawer closed");
     };
-    AppComponent.prototype.getDrawer = function () {
+    MisCarruselesComponent.prototype.getDrawer = function () {
         return this.drawer;
     };
-    AppComponent.prototype.getActualPage = function () {
-        return "MisCarruseles";
+    MisCarruselesComponent.prototype.getActualPage = function () {
+        return routesManager_1.RoutesManager.MIS_CARRUSELES_RUTE;
     };
     __decorate([
         core_1.ViewChild(side_drawer_directives_1.RadSideDrawerComponent), 
         __metadata('design:type', (typeof (_a = typeof side_drawer_directives_1.RadSideDrawerComponent !== 'undefined' && side_drawer_directives_1.RadSideDrawerComponent) === 'function' && _a) || Object)
-    ], AppComponent.prototype, "drawerComponent", void 0);
-    AppComponent = __decorate([
+    ], MisCarruselesComponent.prototype, "drawerComponent", void 0);
+    MisCarruselesComponent = __decorate([
         core_1.Component({
             selector: "my-app",
             directives: [side_drawer_directives_1.RadSideDrawerComponent, side_drawer_directives_1.MainTemplateDirective, side_drawer_directives_1.DrawerTemplateDirective],
@@ -63,9 +63,9 @@ var AppComponent = (function (_super) {
         }),
         __param(0, core_1.Inject(page_1.Page)), 
         __metadata('design:paramtypes', [page_1.Page, router_1.Router, router_1.RouteParams])
-    ], AppComponent);
-    return AppComponent;
+    ], MisCarruselesComponent);
+    return MisCarruselesComponent;
     var _a;
 }(routesManager_1.RoutesManager));
-exports.AppComponent = AppComponent;
+exports.MisCarruselesComponent = MisCarruselesComponent;
 //# sourceMappingURL=miscarruseles.component.js.map

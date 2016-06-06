@@ -1,0 +1,24 @@
+<!-- >> angular-sidedrawer-transitions -->
+<RadSideDrawer #drawer [transition]="sideDrawerTransition">
+<!-- << angular-sidedrawer-transitions -->
+    <template drawerSide>
+        <StackLayout style="background-color: gray;">
+            <StackLayout style=" padding:10;text-align: center;">
+                <Label text="Carrusel Infantil"></Label>
+            </StackLayout>
+            <StackLayout style="background-color: gray;">                
+                <Label text="Mis carruseles" style="padding: 10px;" (tap)=misCarruseles()></Label>
+                <Label text="Administrar Carruseles" style="padding: 10px;" (tap)=administrar()></Label>                
+                <Label text="Configurar aplicación" style="padding: 10px;" (tap)=configurar()></Label>
+                <Label text="Ayuda" style="padding: 10px;" (tap)=ayuda()></Label>
+                <Label text="Danos tu opinión" style="padding: 10px;" (tap)=opinion()></Label>                                   
+            </StackLayout>
+       </StackLayout>
+    </template>
+    <template drawerMain>    
+        <StackLayout>
+            <Button text="OPEN DRAWER" cssClass="drawerContentText" (tap)=openDrawer()></Button>
+            <label text="Estoy en configuracion" style="padding: 10px;"></label>
+        </StackLayout>
+    </template>
+</RadSideDrawer>
