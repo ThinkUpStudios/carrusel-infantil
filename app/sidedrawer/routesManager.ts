@@ -5,6 +5,7 @@ export abstract class RoutesManager{
     
    public static MIS_CARRUSELES_RUTE: string = "MisCarruseles";
    public static ADMINISTRAR_RUTE: string = "Administrar";
+    public static NUEVO_CARRUSEL_RUTE: string = "NuevoCarrusel";
    public static CONFIGURAR_RUTE: string = "Configurar";
    public static AYUDA_RUTE: string = "Ayuda";
    public static OPINION_RUTE: string = "Opinion";
@@ -25,7 +26,12 @@ export abstract class RoutesManager{
         }
     }
     public newCarrusel(){
-        this._router.navigate(["NuevoCarrusel"]);
+        if(this.getActualPage()==RoutesManager.NUEVO_CARRUSEL_RUTE)
+            this.getDrawer().closeDrawer();
+        else{
+            this._router.navigate([RoutesManager.NUEVO_CARRUSEL_RUTE]);
+        }
+        
     }
     
     public administrar() {        
