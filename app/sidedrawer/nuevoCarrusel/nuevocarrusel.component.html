@@ -17,18 +17,19 @@
     </template>
     <template drawerMain>
         <StackLayout>
-            <ListView id="urls-list">
-                <ListView.itemTemplate>
+            <ListView #urls-list [items]="items">
+                <template let-item="item">
                     <GridLayout columns="100, auto" rows="*, *, *">
-                        <Image rowSpan="3" width="100" height="100" src="{{ thumb }}" />
-                        <Label col="1" row="0" text="{{ uri }}" textWrap="true"/>
-                        <Label col="1" row="2" text="{{ fileUri }}" />
+                        <Image rowSpan="3" width="100" height="100" [src]="item.thumb" ></Image>
+                        <Label col="1" row="0" [text]="item.uri" textWrap="true"></Label>
+                        <Label col="1" row="2" [text]="item.fileUri" > </Label>
+
+
                     </GridLayout>
-                </ListView.itemTemplate>
+                </template>
             </ListView>
 
-            <Button row="1" text="Pick Multiple Images" (tap)="onSelectMultipleTap()" />
-            <Button row="2" text="Pick Single Image" (tap)="onSelectSingleTap()" />
+            <Button row="1" text="Pick Multiple Images" (tap)="onSelectMultipleTap()" ></Button>
         </StackLayout>
     </template>
 </RadSideDrawer>

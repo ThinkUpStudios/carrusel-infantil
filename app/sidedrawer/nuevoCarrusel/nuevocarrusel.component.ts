@@ -5,6 +5,7 @@ import {Component, ElementRef, ViewChild, Inject} from "angular2/core";
 import {View} from "ui/core/view";
 import {RadSideDrawer} from "nativescript-telerik-ui-pro/sidedrawer";
 import {Page} from "ui/page";
+import imagepickerModule = require('nativescript-imagepicker');
 import {ActionItem} from "ui/action-bar";
 import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
 import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
@@ -26,6 +27,7 @@ export class AppComponent extends RoutesManager {
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private drawer: SideDrawerType;
+    @ViewChild('urls-list') public list;
     public currentDrawerNotification:string;
 
 
@@ -41,6 +43,30 @@ export class AppComponent extends RoutesManager {
 
     getActualPage(){
         return RoutesManager.NUEVO_CARRUSEL_ROUTE;
+    }
+    onSelectMultipleTap(){
+        var context = imagepickerModule.create({
+            mode: "multiple"
+        });
+        this.startSelection(context);
+    }
+
+    startSelection(context) {
+        context
+            .authorize()
+            .then(function() {
+                this.list.items = [];
+                return context.present();
+            })
+            .then(function(selection) {
+                selection.forEach(function(selected) {
+                    console.log("uri: " + selected.uri);
+                    console.log("fileUri: " + selected.fileUri);
+                });
+                this.list.items = selection;
+            }).catch(function (e) {
+            console.log(e);
+        });
     }
     /**
      * name

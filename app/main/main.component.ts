@@ -28,8 +28,8 @@ import {RoutesManager} from "../sidedrawer/routesManager"
 })
 @RouteConfig([
 
-  { path: "/sidedrawer-miscarruseles", component: MisCarruseles.AppComponent, name: RoutesManager.MIS_CARRUSELES_ROUTE, useAsDefault: true  },
-  { path: "/sidedrawer-transitions", component: Administrar.AppComponent, name: RoutesManager.ADMINISTRAR_ROUTE },
+  { path: "/sidedrawer-miscarruseles", component: MisCarruseles.MisCarruselesComponent, name: RoutesManager.MIS_CARRUSELES_ROUTE, useAsDefault: true  },
+  { path: "/sidedrawer-transitions", component: Administrar.AdministrarComponent, name: RoutesManager.ADMINISTRAR_ROUTE },
   { path: "/sidedrawer/nuevo", component: NuevoCarrusel.AppComponent, name: RoutesManager.NUEVO_CARRUSEL_ROUTE },
   { path: "/sidedrawer-configuracion", component: Configuracion.ConfiguracionComponent, name: RoutesManager.CONFIGURAR_ROUTE },
   { path: "/sidedrawer-ayuda", component: Ayuda.AyudaComponent, name: RoutesManager.AYUDA_ROUTE },
