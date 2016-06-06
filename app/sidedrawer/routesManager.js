@@ -4,28 +4,48 @@ var RoutesManager = (function () {
         this._routeParams = _routeParams;
     }
     RoutesManager.prototype.misCarruseles = function () {
-        if (this.getActualPage() == "MisCarruseles")
+        if (this.getActualPage() == RoutesManager.MIS_CARRUSELES_RUTE)
             this.getDrawer().closeDrawer();
         else {
-            this._router.navigate(["MisCarruseles"]);
+            this._router.navigate([RoutesManager.MIS_CARRUSELES_RUTE]);
         }
     };
     RoutesManager.prototype.newCarrusel = function () {
         this._router.navigate(["NuevoCarrusel"]);
     };
     RoutesManager.prototype.administrar = function () {
-        console.log('estoy en social');
-        this._router.navigate(["Administrar"]);
+        if (this.getActualPage() == RoutesManager.ADMINISTRAR_RUTE)
+            this.getDrawer().closeDrawer();
+        else {
+            this._router.navigate([RoutesManager.ADMINISTRAR_RUTE]);
+        }
     };
     RoutesManager.prototype.configurar = function () {
-        console.log('estoy en importantes');
+        if (this.getActualPage() == RoutesManager.CONFIGURAR_RUTE)
+            this.getDrawer().closeDrawer();
+        else {
+            this._router.navigate([RoutesManager.CONFIGURAR_RUTE]);
+        }
     };
     RoutesManager.prototype.ayuda = function () {
-        console.log('estoy en la starred');
+        if (this.getActualPage() == RoutesManager.AYUDA_RUTE)
+            this.getDrawer().closeDrawer();
+        else {
+            this._router.navigate([RoutesManager.AYUDA_RUTE]);
+        }
     };
     RoutesManager.prototype.opinion = function () {
-        console.log('estoy en la mail');
+        if (this.getActualPage() == RoutesManager.OPINION_RUTE)
+            this.getDrawer().closeDrawer();
+        else {
+            this._router.navigate([RoutesManager.OPINION_RUTE]);
+        }
     };
+    RoutesManager.MIS_CARRUSELES_RUTE = "MisCarruseles";
+    RoutesManager.ADMINISTRAR_RUTE = "Administrar";
+    RoutesManager.CONFIGURAR_RUTE = "Configurar";
+    RoutesManager.AYUDA_RUTE = "Ayuda";
+    RoutesManager.OPINION_RUTE = "Opinion";
     return RoutesManager;
 }());
 exports.RoutesManager = RoutesManager;

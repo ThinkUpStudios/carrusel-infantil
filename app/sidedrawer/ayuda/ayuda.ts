@@ -11,10 +11,10 @@ import {RoutesManager} from "../routesManager"
 @Component({
     selector: "sidedrawer-transitions",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/administrar/administrar.component.html'
+    templateUrl: 'sidedrawer/ayuda/ayuda.html'
 })
 // >> sidedrawer-angular-transition-definition
-export class AdministrarComponent extends RoutesManager {
+export class AyudaComponent extends RoutesManager {
     constructor(@Inject(Page) private page: Page, _router: Router, _routeParams: RouteParams) {
         super(_router, _routeParams);
     }
@@ -76,8 +76,6 @@ export class AdministrarComponent extends RoutesManager {
     }
     
     getActualPage(){
-        return RoutesManager.ADMINISTRAR_RUTE;
+        return RoutesManager.AYUDA_RUTE;
     }
-    
-    
 }

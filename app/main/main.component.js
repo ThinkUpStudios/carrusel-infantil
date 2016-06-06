@@ -13,6 +13,9 @@ var router_2 = require("nativescript-angular/router");
 var MisCarruseles = require("../sidedrawer/miscarruseles/miscarruseles.component");
 var Administrar = require("../sidedrawer/administrar/administrar.component");
 var NuevoCarrusel = require("../sidedrawer/nuevoCarrusel/nuevocarrusel.component");
+var Configuracion = require("../sidedrawer/configuracion/configuracion");
+var Ayuda = require("../sidedrawer/ayuda/ayuda");
+var routesManager_1 = require("../sidedrawer/routesManager");
 var MainComponent = (function () {
     function MainComponent() {
     }
@@ -30,9 +33,14 @@ var MainComponent = (function () {
              * En este caso no funciona el boton atras. Pero en algunos casos puede servir.
              * template: "<router-outlet></router-outlet>"
             */
-            template: "<page-router-outlet></page-router-outlet>"
+            //template: " <page-router-outlet></page-router-outlet>"
+            templateUrl: 'main/main.component.html'
         }),
         router_1.RouteConfig([
+            { path: "/sidedrawer-miscarruseles", component: MisCarruseles.MisCarruselesComponent, name: routesManager_1.RoutesManager.MIS_CARRUSELES_RUTE, useAsDefault: true },
+            { path: "/sidedrawer-transitions", component: Administrar.AdministrarComponent, name: routesManager_1.RoutesManager.ADMINISTRAR_RUTE },
+            { path: "/sidedrawer-configuracion", component: Configuracion.ConfiguracionComponent, name: routesManager_1.RoutesManager.CONFIGURAR_RUTE },
+            { path: "/sidedrawer-ayuda", component: Ayuda.AyudaComponent, name: routesManager_1.RoutesManager.AYUDA_RUTE },
             { path: "/sidedrawer-miscarruseles", component: MisCarruseles.AppComponent, name: "MisCarruseles", useAsDefault: true },
             { path: "/sidedrawer-transitions", component: Administrar.AppComponent, name: "Administrar" },
             { path: "/sidedrawer/nuevo", component: NuevoCarrusel.AppComponent, name: "NuevoCarrusel" }

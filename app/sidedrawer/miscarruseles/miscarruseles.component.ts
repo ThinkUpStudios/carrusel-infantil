@@ -16,7 +16,7 @@ import {RoutesManager} from "../routesManager"
     templateUrl: 'sidedrawer/miscarruseles/miscarruseles.component.html'
     
 })
-export class AppComponent extends RoutesManager {
+export class MisCarruselesComponent extends RoutesManager {
     constructor(@Inject(Page) private page: Page, _router: Router, _routeParams: RouteParams) {
         super(_router, _routeParams);
     }
@@ -35,27 +35,8 @@ export class AppComponent extends RoutesManager {
     }
     
     getActualPage(){
-        return "MisCarruseles";
+        return RoutesManager.MIS_CARRUSELES_RUTE;
     }
-    /**
-     * name
-     
-    public misCarruseles() {        
-        this.drawer.closeDrawer();
-    }
-    public administrar() {
-        console.log('estoy en social');
-        this._router.navigate(["Administrar"]);                
-    }
-    public configurar() {
-        console.log('estoy en importantes')
-    }
-    public ayuda() {
-        console.log('estoy en la starred')
-    }
-    public opinion() {
-        console.log('estoy en la mail')
-    }   
-    */
+    
     
 }
