@@ -10,6 +10,9 @@ var RoutesManager = (function () {
             this._router.navigate(["MisCarruseles"]);
         }
     };
+    RoutesManager.prototype.newCarrusel = function () {
+        this._router.navigate(["NuevoCarrusel"]);
+    };
     RoutesManager.prototype.administrar = function () {
         console.log('estoy en social');
         this._router.navigate(["Administrar"]);

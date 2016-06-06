@@ -17,7 +17,9 @@ export abstract class RoutesManager{
             this._router.navigate(["MisCarruseles"]);   
         }
     }
-    
+    public newCarrusel(){
+        this._router.navigate(["NuevoCarrusel"]);
+    }
     public administrar() {
         console.log('estoy en social');
         this._router.navigate(["Administrar"]);                

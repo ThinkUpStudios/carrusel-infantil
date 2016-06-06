@@ -4,6 +4,7 @@ import { RouteConfig, ROUTER_DIRECTIVES } from "angular2/router";
 import { NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS } from "nativescript-angular/router";
 import * as MisCarruseles from "../sidedrawer/miscarruseles/miscarruseles.component";
 import * as Administrar from "../sidedrawer/administrar/administrar.component";
+import * as NuevoCarrusel from "../sidedrawer/nuevoCarrusel/nuevocarrusel.component";
 
 @Component({
   selector: "main",
@@ -25,6 +26,7 @@ import * as Administrar from "../sidedrawer/administrar/administrar.component";
 
   { path: "/sidedrawer-miscarruseles", component: MisCarruseles.AppComponent, name: "MisCarruseles", useAsDefault: true  },
   { path: "/sidedrawer-transitions", component: Administrar.AppComponent, name: "Administrar" },
+  { path: "/sidedrawer/nuevo", component: NuevoCarrusel.AppComponent, name: "NuevoCarrusel" }
 ])
 export class MainComponent {
 

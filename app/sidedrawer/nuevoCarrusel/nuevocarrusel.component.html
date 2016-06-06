@@ -1,10 +1,10 @@
 <!-- >> angular-sidedrawer-callbacks -->
-<RadSideDrawer #drawer>
+<RadSideDrawer #drawer >
 <!-- << angular-sidedrawer-callbacks -->  
     <template drawerSide>
         <StackLayout style="background-color: gray;">
             <StackLayout style=" padding:10;text-align: center;">
-                <Label text="Carrusel Infantil"></Label>
+                <Label text="Nuevo Carrusel"></Label>
             </StackLayout>
             <StackLayout style="background-color: gray;">                
                 <Label text="Mis carruseles" style="padding: 10px;" (tap)=misCarruseles()></Label>
@@ -17,7 +17,18 @@
     </template>
     <template drawerMain>
         <StackLayout>
-            <Button text="Nuevo carrusel" cssClass="drawerContentText" (tap)=newCarrusel()></Button>
+            <ListView id="urls-list">
+                <ListView.itemTemplate>
+                    <GridLayout columns="100, auto" rows="*, *, *">
+                        <Image rowSpan="3" width="100" height="100" src="{{ thumb }}" />
+                        <Label col="1" row="0" text="{{ uri }}" textWrap="true"/>
+                        <Label col="1" row="2" text="{{ fileUri }}" />
+                    </GridLayout>
+                </ListView.itemTemplate>
+            </ListView>
+
+            <Button row="1" text="Pick Multiple Images" (tap)="onSelectMultipleTap()" />
+            <Button row="2" text="Pick Single Image" (tap)="onSelectSingleTap()" />
         </StackLayout>
     </template>
 </RadSideDrawer>

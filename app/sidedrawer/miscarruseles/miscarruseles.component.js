@@ -30,21 +30,6 @@ var AppComponent = (function (_super) {
     AppComponent.prototype.ngAfterViewInit = function () {
         this.drawer = this.drawerComponent.sideDrawer;
     };
-    AppComponent.prototype.openDrawer = function () {
-        this.drawer.showDrawer();
-    };
-    AppComponent.prototype.onDrawerOpening = function () {
-        console.log("Drawer opening");
-    };
-    AppComponent.prototype.onDrawerOpened = function () {
-        console.log("Drawer opened");
-    };
-    AppComponent.prototype.onDrawerClosing = function () {
-        console.log("Drawer closing");
-    };
-    AppComponent.prototype.onDrawerClosed = function () {
-        console.log("Drawer closed");
-    };
     AppComponent.prototype.getDrawer = function () {
         return this.drawer;
     };

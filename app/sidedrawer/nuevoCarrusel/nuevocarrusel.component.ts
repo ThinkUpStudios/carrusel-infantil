@@ -1,3 +1,6 @@
+/**
+ * Created by Facundo on 05/06/2016.
+ */
 import {Component, ElementRef, ViewChild, Inject} from "angular2/core";
 import {View} from "ui/core/view";
 import {RadSideDrawer} from "nativescript-telerik-ui-pro/sidedrawer";
@@ -13,8 +16,8 @@ import {RoutesManager} from "../routesManager"
 @Component({
     selector: "my-app",
     directives: [RadSideDrawerComponent, MainTemplateDirective, DrawerTemplateDirective],
-    templateUrl: 'sidedrawer/miscarruseles/miscarruseles.component.html'
-    
+    templateUrl: 'sidedrawer/nuevoCarrusel/nuevocarrusel.component.html'
+
 })
 export class AppComponent extends RoutesManager {
     constructor(@Inject(Page) private page: Page, _router: Router, _routeParams: RouteParams) {
@@ -25,6 +28,8 @@ export class AppComponent extends RoutesManager {
     private drawer: SideDrawerType;
     public currentDrawerNotification:string;
 
+
+
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
     }
@@ -33,29 +38,30 @@ export class AppComponent extends RoutesManager {
     getDrawer(){
         return this.drawer;
     }
-    
+
     getActualPage(){
         return "MisCarruseles";
     }
     /**
      * name
-     
-    public misCarruseles() {        
+
+     public misCarruseles() {
         this.drawer.closeDrawer();
     }
-    public administrar() {
+     public administrar() {
         console.log('estoy en social');
-        this._router.navigate(["Administrar"]);                
+        this._router.navigate(["Administrar"]);
     }
-    public configurar() {
+     public configurar() {
         console.log('estoy en importantes')
     }
-    public ayuda() {
+     public ayuda() {
         console.log('estoy en la starred')
     }
-    public opinion() {
+     public opinion() {
         console.log('estoy en la mail')
-    }   
-    */
-    
+    }
+     */
+
 }
+

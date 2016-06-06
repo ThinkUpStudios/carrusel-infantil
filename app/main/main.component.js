@@ -12,6 +12,7 @@ var router_1 = require("angular2/router");
 var router_2 = require("nativescript-angular/router");
 var MisCarruseles = require("../sidedrawer/miscarruseles/miscarruseles.component");
 var Administrar = require("../sidedrawer/administrar/administrar.component");
+var NuevoCarrusel = require("../sidedrawer/nuevoCarrusel/nuevocarrusel.component");
 var MainComponent = (function () {
     function MainComponent() {
     }
@@ -34,6 +35,7 @@ var MainComponent = (function () {
         router_1.RouteConfig([
             { path: "/sidedrawer-miscarruseles", component: MisCarruseles.AppComponent, name: "MisCarruseles", useAsDefault: true },
             { path: "/sidedrawer-transitions", component: Administrar.AppComponent, name: "Administrar" },
+            { path: "/sidedrawer/nuevo", component: NuevoCarrusel.AppComponent, name: "NuevoCarrusel" }
         ]), 
         __metadata('design:paramtypes', [])
     ], MainComponent);
