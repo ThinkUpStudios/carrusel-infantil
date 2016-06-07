@@ -6,6 +6,7 @@ import {View} from "ui/core/view";
 import {RadSideDrawer} from "nativescript-telerik-ui-pro/sidedrawer";
 import {Page} from "ui/page";
 import imagepickerModule = require('nativescript-imagepicker');
+import permissions = require( "nativescript-permissions" );
 import {ActionItem} from "ui/action-bar";
 import sideDrawerModule = require('nativescript-telerik-ui-pro/sidedrawer');
 import {RadSideDrawerComponent, SideDrawerType, MainTemplateDirective, DrawerTemplateDirective} from "nativescript-telerik-ui-pro/sidedrawer/angular/side-drawer-directives";
@@ -13,6 +14,7 @@ import { Router, RouteParams } from "angular2/router";
 import {RoutesManager} from "../routesManager"
 
 
+var list;
 // >> sidedrawer-angular-callbacks-definition
 @Component({
     selector: "my-app",
@@ -27,13 +29,15 @@ export class AppComponent extends RoutesManager {
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private drawer: SideDrawerType;
-    @ViewChild('urls-list') public list;
+    public list;
     public currentDrawerNotification:string;
 
 
 
     ngAfterViewInit() {
         this.drawer = this.drawerComponent.sideDrawer;
+        list = this.page.getViewById("urls-list");
+        list.items = [];
     }
 
 
@@ -55,7 +59,7 @@ export class AppComponent extends RoutesManager {
         context
             .authorize()
             .then(function() {
-                this.list.items = [];
+                list.items = [];
                 return context.present();
             })
             .then(function(selection) {
@@ -63,7 +67,7 @@ export class AppComponent extends RoutesManager {
                     console.log("uri: " + selected.uri);
                     console.log("fileUri: " + selected.fileUri);
                 });
-                this.list.items = selection;
+                list.items = selection;
             }).catch(function (e) {
             console.log(e);
         });

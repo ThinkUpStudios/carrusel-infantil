@@ -7,3 +7,5 @@ node_modules/
 lib/
 main/*.map
 main/*.js
+.idea
+.vcode
